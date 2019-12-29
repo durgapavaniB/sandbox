@@ -1,0 +1,89 @@
+body {
+  background-color: lightgray;
+}
+.carousel-container {
+  margin: 70px auto;
+  position: relative;
+  width: 800px;
+  height: 500px;
+} 
+.carousel-button {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.carousel-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.carousel-button.carousel-left-button {
+  left: 15px;
+}
+.carousel-button.disable {
+  cursor: not-allowed;
+  opacity: 50%;
+}
+
+.carousel-button.carousel-right-button {
+  right: 15px;
+}
+
+.carousel-content {
+  width: 85%;
+  height: 90%;
+  position: relative;
+  margin: 0 auto;
+  overflow: auto;
+}
+.carousel-content .carousel-content-list {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.carousel-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 80%;
+}
+.carousel-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel-nav-container {
+  margin: 10px 0px;
+  width: 100%;
+  height: 50px;
+}
+.carousel-nav-container .carousel-nav-list {
+  list-style-type: none;
+  height: 100%;
+  margin:0 auto;
+  width: 100px;
+  padding: 0;
+}
+
+.carousel-nav {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  opacity: 0.5;
+  display: inline-block;
+  margin: 10px 6px;
+  cursor: pointer;
+} 
+.carousel-nav.curr-selected {
+  opacity: 1;
+}
