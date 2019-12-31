@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <title>Progress Bar</title>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <div class="progress-bar-container">
+    <div class="status-container-js"></div>
+
+  </div>
+  <!----button onclick="animateProgressBarWithJS(2)"> Click For JS animation</button-->
+  <div class="progress-bar-container">
+    <div class="status-container-css"></div>
+
+  </div>
+  <button onclick="animateProgressBarWithJS(2); animateProgressBarWithCSS(2)"> Click For CSS transition</button>
+
+
+  <style type="text/css">
+    body {
+      height: 100%;
+      width: 100%;
+      background-color: lightgrey;
+    }
+
+    .progress-bar-container {
+      color: grey;
+      width: 500px;
+      height: 50px;
+      border: 1px solid ghostwhite;
+      margin: 20px;
+    }
+
+    .status-container-css,
+    .status-container-js {
+      height: 100%;
+      width: 0%;
+      background-color: green;
+    }
+  </style>
+  <script type="text/javascript">
+    let startWidth = 0;
+    function animateProgressBarWithJS(time) {
+      let domEl = document.querySelector('.status-container-js');
+      let timer = setInterval(function () {
+        if (startWidth < 100) {
+          startWidth++;
+          domEl.style.width = startWidth + '%';
+        } else
+          clearInterval(timer);
+      }, time * 1000 / 100); //2000ms/100 - > will call every 20ms, so will take total 100 intervals to make 100% width.
+    }
+    function animateProgressBarWithCSS(time) {
+      let domEl = document.querySelector('.status-container-css');
+      domEl.style['background-color'] = 'pink';
+      domEl.style.transition = `width ${time}s`;
+      domEl.style.width = '100%';
+    }
+  </script>
+</body>
+
+</html>
