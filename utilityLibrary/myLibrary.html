@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="us-en">
+
+<head>
+  <title> Javascript utility library </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="myLibrary.js"></script>
+  <script type="text/javascript" src="myLibraryTest.js"></script>
+</head>
+<style>
+  body {
+    height: 2000px;
+    width: 2000px;
+  }
+</style>
+
+<body onload="myLibraryTest()">
+  <h1> Javascript utility library </h1>
+  <article>
+    <h2> Throttle and Debounce</h2>
+    <div>
+      <h3>Throttle</h3>
+      <p>Scroll window to trigger 'scroll' event</p>
+      <p> Scroll event count:
+        <span id="scrollCount"> </span>
+      </p>
+      <p> Scroll event count with Thottling for every 1 sec:
+        <span id="scrollCountThrottled"> </span>
+      </p>
+    </div>
+    <div>
+      <h3>Debounce</h3>
+      <label for="searchInput">Debounce triggers only when
+        500ms
+        delay is observed. </label>
+      <input id="searchInput" name="keypress" type="text" value=""
+        style="display: block; width:400px; height: 50px; margin-top: 10px;"
+        placeholder="Enter characters in search box to trigger keypress event">
+      <p> keypress event count:
+        <span id="keypressCount"> </span>
+      </p>
+      <p> keypress event count with Denounce for 500 msec delay:
+        <span id="keypressCountDebounced"> </span>
+      </p>
+    </div>
+  </article>
+  <article>
+    <h2> Array Flatten. Sample input -> [['1', '2'], '3', ['4', ['5', ['6']]]]</h2>
+    <div>
+      <button id="flattenArray"> Flatten sample data with depth 1 </button>
+      <p> Flattened data: <span id="flattenedOutput"> </span></p>
+    </div>
+  </article>
+  <article>
+    <h2> Stringify Data. Sample input -> { 'var1': 1, 'var2': 2, 'var3': { 'a': 10, 'b': ['1', '2'] }, 'var4': 4 } </h2>
+    <div>
+      <button id="StringifyData"> Click to see output </button>
+      <p> Stringified data: <span id="StringifiedData"> </span></p>
+    </div>
+  </article>
+
+</body>
+
+</html>
