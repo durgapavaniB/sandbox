@@ -4,7 +4,6 @@ var $ = (function () {
   //chaining - Ensure all methods return context to be chained.
   //window available? nodejs vs web client
   //conflict resolution for '$'
-  //debounce, throttle
   //array methods, object methods, collections
 
   class myLibrary {
